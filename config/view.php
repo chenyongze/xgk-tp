@@ -22,4 +22,10 @@ return [
     'taglib_begin'  => '{',
     // 标签库标签结束标记
     'taglib_end'    => '}',
+    // 定义模板替换字符串
+    'tpl_replace_string' => [
+        '__APP__'    => rtrim(url('@'), '\\/'),
+        '__ROOT__'   => rtrim(dirname(request()->basefile()), '\\/'),
+        '__PUBLIC__' => rtrim(dirname(request()->basefile(true)), '\\/'),
+    ],
 ];
