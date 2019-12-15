@@ -45,7 +45,7 @@
         },
         {
           "title": "系统设置",
-          "href": "/static/admin/page/setting.html",
+          "href": "/admin/system",
           "icon": "fa fa-gears",
           "target": "_self"
         },
