@@ -13,45 +13,46 @@
 {/block}
 
 {block name='content'}
-<div>
-    <div id="ab">
-        dd
-    </div>
+<div class="layer-photos-demo" id="layer-photos-demo">
+    <img src="/static/admin/images/logo.png"  alt="">
+    <img src="/static/admin/images/logo.png"  alt="">
+    <img src="/static/admin/images/logo.png"  alt="">
+    <img src="/static/admin/images/logo.png"  alt="">
 </div>
 {/block}
 
 {block name='js'}
 <script>
-    layui.use(['layer', 'jquery','xgk'], function () {
-        let layer = layui.layer,
-            juery = layui.jquery,
-            xgk = layui.xgk;
-        // layer.msg('hello')
-        // xgk.render('x');
-        // $.post('/admin/system/a', {}, function (str) {
-        //     layer.open({
-        //         type: 1,
-        //         content: str //注意，如果str是object，那么需要字符拼接。
+    layui.use(['form', 'element'], function () {
+        var form = layui.form,
+            layer = layui.layer,
+            $ = layui.$,
+            element = layui.element;
+
+        // layer.alert('酷毙了', { icon: 0, anim: 3 });
+        // layer.load(5);
+        // $('#lay-photos-demo').click(function () {
+        //     layer.photos({
+        //         photos: '#layer-photos-demo',
+        //         anim: 5 //0-6的选择，指定弹出图片动画类型，默认随机（请注意，3.0之前的版本用shift参数）
         //     });
-        // });
-
-        // layer.open({
-        //     type: 2,
-        //     content: ['http://baidu.com', 'no'] //这里content是一个URL，如果你不想让iframe出现滚动条，你还可以content: ['http://sentsin.com', 'no']
-        // });
-        juery('#ab').click(function () {
-            // layer.msg('hello');
-            layer.open({
-                type: 1,
-                content: 'xxx',
-                title: '标题',
-            })
-            xgk.render('ab')
+        // })
+        layer.photos({
+                photos: '#layer-photos-demo',
+                anim: 5 //0-6的选择，指定弹出图片动画类型，默认随机（请注意，3.0之前的版本用shift参数）
+            });
 
 
+        //监听提交
+        form.on('submit(formDemo)', function (data) {
+            layer.msg(JSON.stringify(data.field));
+            return false;
+        });
 
+        element.on('tab(docDemoTabBrief)', function (data) {
+            layer.msg(this.getAttribute('lay-id'));
+            return false;
         })
-
-    })
+    });
 </script>
 {/block}

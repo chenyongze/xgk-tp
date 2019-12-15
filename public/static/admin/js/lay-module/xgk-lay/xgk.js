@@ -5,7 +5,7 @@ layui.define(["element", "jquery"], function (exports) {
         layer = layui.layer;
     var xgk = {
         render: function (param) {
-            alert(param);
+            layer.msg(param)
         },
     }
     exports("xgk", xgk);

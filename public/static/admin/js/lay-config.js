@@ -10,8 +10,9 @@ window.rootPath = (function (src) {
 })();
 
 layui.config({
-    base: rootPath + "lay-module/",
-    version: true
+    base: rootPath + "lay-module/", //设定扩展的Layui模块的所在目录，一般用于外部模块扩展
+    version: true,
+    // debug: true
 }).extend({
     layuimini: "layuimini/layuimini", // layuimini扩展
     step: 'step-lay/step', // 分步表单扩展
@@ -23,3 +24,14 @@ layui.config({
     wangEditor: 'wangEditor/wangEditor', // wangEditor富文本扩展
     xgk: 'xgk-lay/xgk', // xgk js
 });
+
+
+// 全局方法 
+layui.use(['layer', 'jquery'], function () {
+    let layer = layui.layer,
+        $ = layui.$
+    $body = $('body');
+    $body.on('click', '[data-phone-view]', function () {
+        layer.msg('data-phone-view')
+    });
+})
