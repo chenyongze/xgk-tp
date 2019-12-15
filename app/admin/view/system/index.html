@@ -1,12 +1,12 @@
 {extend name='main'/}
 {block name='css'}
-    <style>
-        .layui-form-item .layui-input-company {
-            width: auto;
-            padding-right: 10px;
-            line-height: 38px;
-        }
-    </style>
+<style>
+    .layui-form-item .layui-input-company {
+        width: auto;
+        padding-right: 10px;
+        line-height: 38px;
+    }
+</style>
 {/block}
 
 {block name='content'}
@@ -16,7 +16,7 @@
             <label class="layui-form-label required">网站名称</label>
             <div class="layui-input-block">
                 <input type="text" name="sitename" lay-verify="required" lay-reqtext="网站域名不能为空" placeholder="请输入网站名称"
-                    value="layuimini" class="layui-input">
+                    value="layuimini  {:app()->version()}" class="layui-input">
                 <tip>填写自己部署网站的名称。</tip>
             </div>
         </div>
@@ -83,7 +83,7 @@
     </div>
 </div>
 {/block}
-
+version
 
 {block name='js'}
 <script>
