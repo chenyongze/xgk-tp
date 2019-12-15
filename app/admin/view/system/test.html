@@ -1,0 +1,57 @@
+<!-- 示例页面 -->
+{extend name='main'/}
+{block name='css'}
+<style>
+    #ab {
+        width: 300px;
+        height: 300px;
+        margin: 100px;
+        line-height: 100px;
+        border: 1px solid red;
+    }
+</style>
+{/block}
+
+{block name='content'}
+<div>
+    <div id="ab">
+        dd
+    </div>
+</div>
+{/block}
+
+{block name='js'}
+<script>
+    layui.use(['layer', 'jquery','xgk'], function () {
+        let layer = layui.layer,
+            juery = layui.jquery,
+            xgk = layui.xgk;
+        // layer.msg('hello')
+        // xgk.render('x');
+        // $.post('/admin/system/a', {}, function (str) {
+        //     layer.open({
+        //         type: 1,
+        //         content: str //注意，如果str是object，那么需要字符拼接。
+        //     });
+        // });
+
+        // layer.open({
+        //     type: 2,
+        //     content: ['http://baidu.com', 'no'] //这里content是一个URL，如果你不想让iframe出现滚动条，你还可以content: ['http://sentsin.com', 'no']
+        // });
+        juery('#ab').click(function () {
+            // layer.msg('hello');
+            layer.open({
+                type: 1,
+                content: 'xxx',
+                title: '标题',
+            })
+            xgk.render('ab')
+
+
+
+        })
+
+    })
+</script>
+{/block}

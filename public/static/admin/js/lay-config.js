@@ -21,4 +21,5 @@ layui.config({
     echarts: 'echarts/echarts', // echarts图表扩展
     echartsTheme: 'echarts/echartsTheme', // echarts图表主题扩展
     wangEditor: 'wangEditor/wangEditor', // wangEditor富文本扩展
+    xgk: 'xgk-lay/xgk', // xgk js
 });
