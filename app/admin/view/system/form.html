@@ -1,0 +1,26 @@
+<form class="layui-form layui-card" action="{:url('edit')}" data-auto="false" method="post" autocomplete="off">
+    <div class="layui-card-body">
+        <div class="layui-form-item">
+            <label class="layui-form-label ">订单号</label>
+            <div class="layui-input-block">
+                <input name="order_sn" value='bbb' placeholder="订单号" class="layui-input">
+            </div>
+        </div>
+    </div>
+    <div class="hr-line-dashed"></div>
+    <div class="layui-form-item text-center">
+        {notempty name='vo.id'}<input type='hidden' value='{$vo.id}' name='id'>{/notempty}
+        <input type='hidden' value='4' name='id'>
+        <button class="layui-btn" type='submit' lay-submit>保存数据</button>
+        <button class="layui-btn layui-btn-danger" type='button' data-confirm="确定要取消编辑吗？" data-close>取消编辑</button>
+    </div>
+    <script>
+        // layui.use(['form'], function () {
+        //     var $ = layui.$
+        //         , form = layui.form
+        //     form.on('submit(order)', function () {
+        //         console.log('x')
+        //     })
+        // })
+    </script>
+</form>

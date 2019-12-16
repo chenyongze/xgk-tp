@@ -44,4 +44,23 @@ class System extends BaseController
     {
         return 'ssss';
     }
+
+
+    /**
+     * 编辑
+     *
+     * @return void
+     * @author yongze.chen <yongze@dingtalk.com>
+     *
+     */
+    public function edit()
+    {
+        // echo json_encode(['code' => 0]);
+        return json(['code' => 1, 'info' => 'hello', 'data' => '']);
+    }
+
+    public function add()
+    {
+        return view('form');
+    }
 }

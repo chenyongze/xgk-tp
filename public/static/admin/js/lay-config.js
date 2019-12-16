@@ -24,14 +24,3 @@ layui.config({
     wangEditor: 'wangEditor/wangEditor', // wangEditor富文本扩展
     xgk: 'xgk-lay/xgk', // xgk js
 });
-
-
-// 全局方法 
-layui.use(['layer', 'jquery'], function () {
-    let layer = layui.layer,
-        $ = layui.$
-    $body = $('body');
-    $body.on('click', '[data-phone-view]', function () {
-        layer.msg('data-phone-view')
-    });
-})
