@@ -11,4 +11,8 @@ class Index extends BaseController
     {
         return View::fetch();
     }
+
+    public function h()
+    {
+    }
 }
