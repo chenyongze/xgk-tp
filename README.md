@@ -26,14 +26,20 @@ chmod +x think
 ./think run -p 8076
 ~~~
 
-a
-b
-c
 
-d
-e
 
-m
-n
-f
-g
+### 页面截图
+
+![image-20200224215816939](README.assets/image-20200224215816939.png)
+
+![image-20200224215914964](README.assets/image-20200224215914964.png)
+
+
+
+![image-20200224215928885](README.assets/image-20200224215928885.png)
+
+
+
+![image-20200224220057667](README.assets/image-20200224220057667.png)
+
+![image-20200224220103608](README.assets/image-20200224220103608.png)
